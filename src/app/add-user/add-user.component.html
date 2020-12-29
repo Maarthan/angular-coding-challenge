@@ -1,0 +1,21 @@
+<form #userFrom="ngForm" (ngSubmit)="onSubmit(userFrom)">
+    <div>
+        <label>Email Id</label>
+        <input type="email" name="email" [ngModel]="newUser.email" class="input" placeholder="Email" required>
+    </div>
+    <div>
+        <label>Age</label>
+        <input type="number" name="age" [ngModel]="newUser.age" class="input" placeholder="Age" required>
+    </div>
+    <div>
+        <label>First Name</label>
+        <input type="text" name="firstName" [ngModel]="newUser.firstName" class="input" placeholder="First Name" required>
+    </div>
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="lastName" [ngModel]="newUser.lastName" class="input" placeholder="Last Name" required>
+    </div>
+    <div>
+        <button type="submit" [disabled]="!userFrom.valid">Add User</button>
+    </div>
+</form>

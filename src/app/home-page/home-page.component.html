@@ -1,0 +1,6 @@
+<h1>Users list</h1>
+<pre *ngFor="let user of usersArray" >{{user | json}}
+    <button (click)="onDelete(user)">delete</button>
+    <br>
+    <button (click)="onUpdate(user)">Update</button>
+</pre>
